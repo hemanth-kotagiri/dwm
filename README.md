@@ -1,1 +1,3 @@
-### My Personal Build of DWM - Dynamic Window Manager
+### dwm
+
+My personal build of Suckless' Dynamic Window Manager
