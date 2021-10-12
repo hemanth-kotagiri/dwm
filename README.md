@@ -5,6 +5,7 @@ My personal build of Suckless' Dynamic Window Manager
 #### Patches/Additional Features
 
 - [ ] full-gaps
+- [ ] systray
 - [ ] slstatus/dwmblocks
 - [ ] layouts
 
