@@ -6,6 +6,7 @@ My personal build of Suckless' Dynamic Window Manager
 
 - [ ] full-gaps
 - [ ] systray
+- [ ] vacant-tags
 - [ ] slstatus/dwmblocks
 - [ ] layouts
 
