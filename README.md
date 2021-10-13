@@ -4,6 +4,7 @@
 ### Patches/Additional Features
 
 - [x] full-gaps
+- [x] always-centered
 - [ ] systray
 - [ ] vacant-tags
 - [ ] slstatus/dwmblocks
