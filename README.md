@@ -1,8 +1,8 @@
-## dwm
+<p align="center"><img width=200 src="https://dwm.suckless.org/dwm.svg"></p>
 
-My personal build of Suckless' Dynamic Window Manager
+<p align="center">My personal build of Suckless' Dynamic Window Manager</p>
 
-#### Patches/Additional Features
+### Patches/Additional Features
 
 - [ ] full-gaps
 - [ ] systray
