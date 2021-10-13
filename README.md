@@ -3,7 +3,7 @@
 
 ### Patches/Additional Features
 
-- [ ] full-gaps
+- [x] full-gaps
 - [ ] systray
 - [ ] vacant-tags
 - [ ] slstatus/dwmblocks
