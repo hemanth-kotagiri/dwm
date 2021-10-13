@@ -5,7 +5,7 @@
 
 - [x] full-gaps
 - [x] always-centered
-- [ ] systray
+- [x] systray
 - [ ] vacant-tags
 - [ ] slstatus/dwmblocks
 - [ ] layouts
