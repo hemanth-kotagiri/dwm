@@ -108,7 +108,6 @@ enum {
   ClkTagBar,
   ClkLtSymbol,
   ClkStatusText,
-  ClkWinTitle,
   ClkClientWin,
   ClkRootWin,
   ClkLast
@@ -507,7 +506,7 @@ void buttonpress(XEvent *e) {
 
       click = ClkStatusText;
     else
-      click = ClkWinTitle;
+      click = ClkStatusText;
   } else if ((c = wintoclient(ev->window))) {
     focus(c);
     restack(selmon);
@@ -852,15 +851,8 @@ void drawbar(Monitor *m) {
   x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
 
   if ((w = m->ww - tw - stw - x) > bh) {
-    if (m->sel) {
-      drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
-      drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
-      if (m->sel->isfloating)
-        drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
-    } else {
-      drw_setscheme(drw, scheme[SchemeNorm]);
-      drw_rect(drw, x, 0, w, bh, 1, 1);
-    }
+    drw_setscheme(drw, scheme[SchemeNorm]);
+    drw_rect(drw, x, 0, w, bh, 1, 1);
   }
   drw_map(drw, m->barwin, 0, 0, m->ww - stw, bh);
 }
@@ -1382,11 +1374,8 @@ void propertynotify(XEvent *e) {
       drawbars();
       break;
     }
-    if (ev->atom == XA_WM_NAME || ev->atom == netatom[NetWMName]) {
+    if (ev->atom == XA_WM_NAME || ev->atom == netatom[NetWMName])
       updatetitle(c);
-      if (c == c->mon->sel)
-        drawbar(c->mon);
-    }
     if (ev->atom == netatom[NetWMWindowType])
       updatewindowtype(c);
   }
