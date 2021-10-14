@@ -7,6 +7,7 @@
 - [x] always-centered
 - [x] systray
 - [x] rotate-stack
+- [x] layout-scroll
 - [ ] vacant-tags
 - [ ] slstatus/dwmblocks
 - [ ] layouts
