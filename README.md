@@ -8,6 +8,7 @@
 - [x] systray
 - [x] rotate-stack
 - [x] layout-scroll
+- [x] shift-view
 - [ ] vacant-tags
 - [ ] slstatus/dwmblocks
 - [ ] layouts
