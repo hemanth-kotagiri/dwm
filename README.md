@@ -9,6 +9,7 @@
 - [x] rotate-stack
 - [x] layout-scroll
 - [x] shift-view
+- [x] actual-fullscreen
 - [ ] slstatus/dwmblocks
 
 ### Optional
