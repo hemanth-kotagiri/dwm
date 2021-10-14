@@ -9,8 +9,11 @@
 - [x] rotate-stack
 - [x] layout-scroll
 - [x] shift-view
-- [ ] vacant-tags
 - [ ] slstatus/dwmblocks
+
+### Optional
+
+- [ ] vacant-tags
 - [ ] layouts
 
 These patches are applied across different branches and are merged into the
