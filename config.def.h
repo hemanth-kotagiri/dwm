@@ -9,7 +9,7 @@
 
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -75,7 +75,14 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *brave[]  = { "brave", NULL };
 
+/* Volume control */
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+
 #include "patches/shiftview.c"
+#include <X11/XF86keysym.h>
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
@@ -121,6 +128,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	// Volume Control Keys
+	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 };
 
 /* button definitions */
