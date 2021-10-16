@@ -11,7 +11,7 @@
 - [x] shift-view
 - [x] actual-fullscreen
 - [x] focusonnetactive
-- [ ] slstatus/dwmblocks
+- [x] [dwmblocks](https://github.com/hemanth-kotagiri/dwmblocks)
 
 ### Optional
 
