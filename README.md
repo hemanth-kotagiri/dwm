@@ -22,6 +22,7 @@ To learn more about the Philosophy of Suckless Software, and other tools, head o
 - [x] full-gaps
 - [x] always-centered
 - [x] systray
+- [x] no-tile
 - [x] rotate-stack
 - [x] layout-scroll
 - [x] shift-view
