@@ -1,4 +1,4 @@
-<p align="center"><img width=200 src="https://dwm.suckless.org/dwm.svg"></p>
+<p align="center"><img width=300 src="https://dwm.suckless.org/dwm.svg"></p>
 <p align="center">My personal build of Suckless' Dynamic Window Manager</p>
 
 ### Patches/Additional Features
