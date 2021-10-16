@@ -10,6 +10,7 @@
 - [x] layout-scroll
 - [x] shift-view
 - [x] actual-fullscreen
+- [x] focusonnetactive
 - [ ] slstatus/dwmblocks
 
 ### Optional
