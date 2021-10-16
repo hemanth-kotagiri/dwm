@@ -78,9 +78,12 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon , "-fn", dmenufont
 static const char *termcmd[]  = { "st", NULL };
 static const char *brave[]  = { "brave", NULL };
 static const char *emoji_launcher[]  = { "rofi", "-show", "emoji", NULL };
+static const char *rofi_window[]  = { "rofi", "-show", "window", NULL };
 static const char *naut[]  = { "nautilus", NULL };
 static const char *shutdown_menu[]  = { "shutdown_menu", NULL };
 static const char *whatsapp[]  = { "whatsapp-nativefier", NULL };
+static const char *notion[]  = { "notion-app", NULL };
+static const char *signal_app[]  = { "signal-desktop", NULL };
 
 /* Volume control */
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -92,11 +95,16 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	// Personal
 	{ MODKEY,                       XK_e,      spawn,          {.v = emoji_launcher } },
 	{ ControlMask|Mod1Mask,         XK_Delete, spawn,          {.v = shutdown_menu } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = naut } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whatsapp } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = signal_app } },
+	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = notion } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = rofi_window } },
+	// DEFAULTS
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = +1 }},
 	{ MODKEY,                       XK_p,      shiftview,      {.i = -1 }},
 	{ MODKEY,                       XK_b,      spawn,          {.v = brave }},
