@@ -1,5 +1,6 @@
 <p align="center"><img width=300 src="https://dwm.suckless.org/dwm.svg"></p>
-<p align="center">My personal build of Suckless' Dynamic Window Manager</p>
+<p align="center"><b>My personal build of Suckless' Dynamic Window Manager</b></p>
+<p align="center"><img src="rice.png"></p>
 
 ### Why DWM?
 
@@ -32,6 +33,7 @@ head over to [suckless.org](https://suckless.org).
 ### Optional
 
 - [ ] vacant-tags
+- [ ] vanity-gaps
 - [ ] layouts
 
 These patches are applied across different branches and are merged into the
