@@ -86,9 +86,9 @@ static const char *notion[]  = { "notion-app", NULL };
 static const char *signal_app[]  = { "signal-desktop", NULL };
 
 /* Volume control */
-static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *upvol[]   = { "amixer", "-D", "pulse",  "sset","Master", "5%+",     NULL };
+static const char *downvol[] = { "amixer", "-D", "pulse",  "sset","Master", "5%-",     NULL };
+static const char *mutevol[] = { "amixer", "-D", "pulse",  "sset","Master", "1+", "toggle",     NULL };
 
 #include "patches/shiftview.c"
 #include <X11/XF86keysym.h>
