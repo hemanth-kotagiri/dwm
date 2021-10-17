@@ -7,15 +7,14 @@ Keeping things simple, minimal and usable.
 
 **dwm** is customized through editing its source code, which makes it extremely
 fast and secure - it does not process any input data which isn't known at
-compile time, except window titles and status text read from the root window's
-name. To customize it for your needs: you only have to learn C (at least in
-order to edit the header file).
+compile time. To customize it for your needs, you need to know C.
 
 **Because dwm is customized through editing its source code, it's pointless to
 make binary packages of it. This keeps its userbase small and elitist. No
 novices asking stupid questions.**
 
-To learn more about the Philosophy of Suckless Software, and other tools, head over to [suckless.org](https://suckless.org).
+To learn more about the Philosophy of Suckless Software, and their other tools,
+head over to [suckless.org](https://suckless.org).
 
 ### Patches/Additional Features
 
