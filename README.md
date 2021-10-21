@@ -35,6 +35,7 @@ head over to [suckless.org](https://suckless.org).
 - [ ] vacant-tags
 - [ ] vanity-gaps
 - [ ] layouts
+- [ ] swallow
 
 These patches are applied across different branches and are merged into the
 master - Maintaing a simple error-free development workflow for the rice.
