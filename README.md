@@ -29,13 +29,13 @@ head over to [suckless.org](https://suckless.org).
 - [x] actual-fullscreen
 - [x] focusonnetactive
 - [x] [dwmblocks](https://github.com/hemanth-kotagiri/dwmblocks)
+- [x] swallow
 
 ### Optional
 
 - [ ] vacant-tags
 - [ ] vanity-gaps
 - [ ] layouts
-- [ ] swallow
 
 These patches are applied across different branches and are merged into the
 master - Maintaing a simple error-free development workflow for the rice.
