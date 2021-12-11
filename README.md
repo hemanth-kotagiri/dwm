@@ -19,17 +19,17 @@ head over to [suckless.org](https://suckless.org).
 
 ### Patches/Additional Features
 
-- [x] full-gaps
-- [x] always-centered
-- [x] systray
-- [x] no-tile
-- [x] rotate-stack
-- [x] layout-scroll
-- [x] shift-view
-- [x] actual-fullscreen
-- [x] focusonnetactive
+- [x] [full-gaps](./patches/dwm-fullgaps-6.2.diff)
+- [x] [always-centered](./patches/dwm-alwayscenter-20200625-f04cac6.diff)
+- [x] [systray](./patches/dwm-systray-20210418-67d76bd.diff)
+- [x] [no-tile](./patches/dwm-notitle-6.2.diff)
+- [x] [rotate-stack](./patches/dwm-rotatestack-20161021-ab9571b.diff)
+- [x] [layout-scroll](./patches/dwm-layoutscroll-6.2.diff)
+- [x] [shift-view](./patches/shiftview.c)
+- [x] [actual-fullscreen](./patches/dwm-actualfullscreen-20191112-cb3f58a.diff)
+- [x] [focusonnetactive](./patches/dwm-focusonnetactive-6.2.diff)
 - [x] [dwmblocks](https://github.com/hemanth-kotagiri/dwmblocks)
-- [x] swallow
+- [x] [swallow](./patches/dwm-swallow-20201211-61bb8b2.diff)
 
 ### Optional
 
