@@ -34,6 +34,7 @@ head over to [suckless.org](https://suckless.org).
 ### Optional
 
 - [ ] vacant-tags
+- [ ] pertag
 - [ ] vanity-gaps
 - [ ] layouts
 
