@@ -22,7 +22,7 @@ head over to [suckless.org](https://suckless.org).
 - [x] [full-gaps](./patches/dwm-fullgaps-6.2.diff)
 - [x] [always-centered](./patches/dwm-alwayscenter-20200625-f04cac6.diff)
 - [x] [systray](./patches/dwm-systray-20210418-67d76bd.diff)
-- [x] [no-tile](./patches/dwm-notitle-6.2.diff)
+- [x] [no-title](./patches/dwm-notitle-6.2.diff)
 - [x] [rotate-stack](./patches/dwm-rotatestack-20161021-ab9571b.diff)
 - [x] [layout-scroll](./patches/dwm-layoutscroll-6.2.diff)
 - [x] [shift-view](./patches/shiftview.c)
