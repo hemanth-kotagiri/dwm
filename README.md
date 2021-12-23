@@ -19,7 +19,6 @@ head over to [suckless.org](https://suckless.org).
 
 ### Patches/Additional Features
 
-- [x] [full-gaps](./patches/dwm-fullgaps-6.2.diff)
 - [x] [always-centered](./patches/dwm-alwayscenter-20200625-f04cac6.diff)
 - [x] [systray](./patches/dwm-systray-20210418-67d76bd.diff)
 - [x] [no-title](./patches/dwm-notitle-6.2.diff)
