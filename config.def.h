@@ -112,6 +112,9 @@ static const char *signal_app[]  = { "signal-desktop", NULL };
 static const char *upvol[]   = { "amixer", "-D", "pulse",  "sset","Master", "5%+",     NULL };
 static const char *downvol[] = { "amixer", "-D", "pulse",  "sset","Master", "5%-",     NULL };
 static const char *mutevol[] = { "amixer", "-D", "pulse",  "sset","Master", "1+", "toggle",     NULL };
+static const char *pause_audio[] = { "playerctl", "pause", NULL };
+static const char *play_audio[] = { "playerctl", "play", NULL };
+static const char *audio_toggle[] = {"playerctl", "play-pause", NULL};
 
 #include "patches/shiftview.c"
 #include <X11/XF86keysym.h>
@@ -185,17 +188,22 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	// Volume Control Keys
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0,                       XF86XK_AudioMute,        spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_AudioPause,       spawn, {.v = pause_audio   } },
+	{ 0,                       XF86XK_AudioPlay,        spawn, {.v = play_audio   } },
 };
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	// Volume Control
+	{ ClkLtSymbol,          0,              Button4,        spawn,          {.v = upvol} },
+	{ ClkLtSymbol,          0,              Button1,        spawn,      {.v = audio_toggle} },
+	{ ClkLtSymbol,          0,              Button5,        spawn,          {.v = downvol} },
+
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
@@ -205,4 +213,6 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkTagBar,            0,              Button4,        shiftview,     {.i=-1} },
+	{ ClkTagBar,            0,              Button5,        shiftview,     {.i=+1} },
 };
