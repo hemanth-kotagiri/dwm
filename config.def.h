@@ -9,7 +9,7 @@
 
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -19,8 +19,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const unsigned int gappih    = 5;        /* horiz inner gap between windows */
 static const unsigned int gappiv    = 5;        /* vert inner gap between windows */
-static const unsigned int gappoh    = 15;       /* vert outer gap between windows and screen edge */
-static const unsigned int gappov    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappoh    = 5;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappov    = 5;       /* horiz outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -105,8 +105,9 @@ static const char *rofi_window[]  = { "rofi", "-show", "window", NULL };
 static const char *naut[]  = { "nautilus", NULL };
 static const char *shutdown_menu[]  = { "shutdown_menu", NULL };
 static const char *whatsapp[]  = { "whatsapp-nativefier", NULL };
-static const char *notion[]  = { "notion-app", NULL };
+static const char *notion[]  = { "notion-app-enhanced", NULL };
 static const char *signal_app[]  = { "signal-desktop", NULL };
+static const char *auto_launch_script[] = {"auto", NULL};
 
 /* Volume control */
 static const char *upvol[]   = { "amixer", "-D", "pulse",  "sset","Master", "5%+",     NULL };
@@ -128,6 +129,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whatsapp } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = signal_app } },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = notion } },
+	{ Mod1Mask|MODKEY,              XK_a,      spawn,          {.v = auto_launch_script } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = rofi_window } },
 	// DEFAULTS
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
