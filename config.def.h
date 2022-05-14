@@ -117,8 +117,14 @@ static const char *mutevol[] = { "amixer", "-D", "pulse",  "sset","Master", "1+"
 static const char *pause_audio[] = { "playerctl", "pause", NULL };
 static const char *play_audio[] = { "playerctl", "play", NULL };
 static const char *audio_toggle[] = {"playerctl", "play-pause", NULL};
+
+// tdrop
 static const char *books[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "0", "st", "-c", "floating", "-e", "ranger", "/media/data/Education/Books", NULL };
-//tdrop -am -w 70% -h 70% -y 15% -x 15% -n 0 st -c "floating" -e ranger /media/data/Education/Books
+static const char *btech[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "1", "st", "-c", "floating", "-e", "ranger", "/media/volume/B.Tech-Docs", NULL};
+static const char *downl[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "2", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Downloads/", NULL};
+static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "2", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
+
+//tdrop -am -w 70% -h 70% -y 15% -x 15% -n 0 st -c "floating" -e ranger/media/volume/B.Tech\ Docs  
 
 
 #include "patches/shiftview.c"
@@ -128,9 +134,14 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	// Personal
 	{ MODKEY,                       XK_e,      spawn,          {.v = emoji_launcher } },
+  // scratchpads with tdrop
 	{ Mod1Mask,                     XK_b,      spawn,          {.v = books } },
 	{ Mod1Mask|ShiftMask,           XK_b,      spawn,          {.v = btech } },
+	{ Mod1Mask,                     XK_d,      spawn,          {.v = downl } },
+	{ Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = docs } },
+  
 	{ ControlMask|Mod1Mask,         XK_Delete, spawn,          {.v = shutdown_menu } },
+  
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = naut } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whatsapp } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = signal_app } },
