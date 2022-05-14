@@ -122,7 +122,7 @@ static const char *audio_toggle[] = {"playerctl", "play-pause", NULL};
 static const char *books[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "0", "st", "-c", "floating", "-e", "ranger", "/media/data/Education/Books", NULL };
 static const char *btech[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "1", "st", "-c", "floating", "-e", "ranger", "/media/volume/B.Tech-Docs", NULL};
 static const char *downl[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "2", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Downloads/", NULL};
-static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "2", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
+static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "3", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
 
 //tdrop -am -w 70% -h 70% -y 15% -x 15% -n 0 st -c "floating" -e ranger/media/volume/B.Tech\ Docs  
 
