@@ -19,13 +19,13 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const unsigned int gappih    = 5;        /* horiz inner gap between windows */
 static const unsigned int gappiv    = 5;        /* vert inner gap between windows */
-static const unsigned int gappoh    = 5;       /* vert outer gap between windows and screen edge */
-static const unsigned int gappov    = 5;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappoh    = 8;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappov    = 8;       /* horiz outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack:size=10", "JoyPixels:pixelsize=15:antialias=true:autohint=true"};
-static const char dmenufont[]       = "Hack:size=10";
+static const char *fonts[]          = { "Jetbrains Mono:size=11", "JoyPixels:pixelsize=15:antialias=true:autohint=true"};
+static const char dmenufont[]       = "Jetbrains Mono:size=11";
 //static const char col_gray1[]       = "#222222";
 //static const char col_gray2[]       = "#444444";
 //static const char col_gray3[]       = "#bbbbbb";
@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "floating",NULL,     NULL,           0,         1,          1,           0,        -1 },
 	{ "st-256color", NULL, NULL,           0,         0,          1,           0,        -1 },
 	{ "ranger",  NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
@@ -116,6 +117,9 @@ static const char *mutevol[] = { "amixer", "-D", "pulse",  "sset","Master", "1+"
 static const char *pause_audio[] = { "playerctl", "pause", NULL };
 static const char *play_audio[] = { "playerctl", "play", NULL };
 static const char *audio_toggle[] = {"playerctl", "play-pause", NULL};
+static const char *books[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "0", "st", "-c", "floating", "-e", "ranger", "/media/data/Education/Books", NULL };
+//tdrop -am -w 70% -h 70% -y 15% -x 15% -n 0 st -c "floating" -e ranger /media/data/Education/Books
+
 
 #include "patches/shiftview.c"
 #include <X11/XF86keysym.h>
@@ -124,6 +128,8 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	// Personal
 	{ MODKEY,                       XK_e,      spawn,          {.v = emoji_launcher } },
+	{ Mod1Mask,                     XK_b,      spawn,          {.v = books } },
+	{ Mod1Mask|ShiftMask,           XK_b,      spawn,          {.v = btech } },
 	{ ControlMask|Mod1Mask,         XK_Delete, spawn,          {.v = shutdown_menu } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = naut } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whatsapp } },
