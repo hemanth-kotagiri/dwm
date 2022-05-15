@@ -123,6 +123,7 @@ static const char *books[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "
 static const char *btech[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "1", "st", "-c", "floating", "-e", "ranger", "/media/volume/B.Tech-Docs", NULL};
 static const char *downl[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "2", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Downloads/", NULL};
 static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "3", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
+static const char *float_term[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "4", "st", "-c", "floating", NULL};
 
 //tdrop -am -w 70% -h 70% -y 15% -x 15% -n 0 st -c "floating" -e ranger/media/volume/B.Tech\ Docs  
 
@@ -136,6 +137,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = emoji_launcher } },
   // scratchpads with tdrop
 	{ Mod1Mask,                     XK_b,      spawn,          {.v = books } },
+	{ Mod1Mask,                     XK_t,      spawn,          {.v = float_term } },
 	{ Mod1Mask|ShiftMask,           XK_b,      spawn,          {.v = btech } },
 	{ Mod1Mask,                     XK_d,      spawn,          {.v = downl } },
 	{ Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = docs } },
