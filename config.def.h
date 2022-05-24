@@ -125,8 +125,8 @@ static const char *btech[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "
 static const char *downl[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "2", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Downloads/", NULL};
 static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "3", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
 static const char *float_term[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "4", "st", "-c", "floating", NULL};
-static const char *music[] = {"tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "5", "chromium", "--new-window", "https://music.youtube.com", "--class=music", NULL};
-static const char *wa[] = {"tdrop", "-am", "-w", "70%", "-h", "90%", "-y", "15%", "-x", "15%", "-n", "6", "chromium", "--new-window", "https://web.whatsapp.com", "--class=wa", NULL};
+static const char *music[] = {"tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "5", "chromium", "--new-window", "--app=https://music.youtube.com", "--class=music", NULL};
+static const char *wa[] = {"tdrop", "-am", "-w", "70%", "-h", "80%", "-y", "10%", "-x", "15%", "-n", "6", "chromium", "--new-window", "--app=https://web.whatsapp.com", "--class=wa", NULL};
 
 //$ tdrop -am -w 70% -h 70% -y 15% -x 15% -n 10 chromium --new-window https://music.youtube.com --class="test"
 
