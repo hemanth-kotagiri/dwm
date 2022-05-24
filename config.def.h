@@ -55,6 +55,7 @@ static const Rule rules[] = {
 	{ "floating",NULL,     NULL,           0,         1,          1,           0,        -1 },
 	{ "st-256color", NULL, NULL,           0,         0,          1,           0,        -1 },
 	{ "ranger",  NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ "wa",   NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "music",   NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
@@ -106,7 +107,6 @@ static const char *emoji_launcher[]  = { "rofi", "-show", "emoji", NULL };
 static const char *rofi_window[]  = { "rofi", "-show", "window", NULL };
 static const char *naut[]  = { "nautilus", NULL };
 static const char *shutdown_menu[]  = { "shutdown_menu", NULL };
-static const char *whatsapp[]  = { "whatsapp-nativefier", NULL };
 static const char *notion[]  = { "notion-app-enhanced", NULL };
 static const char *signal_app[]  = { "signal-desktop", NULL };
 static const char *auto_launch_script[] = {"auto", NULL};
@@ -126,6 +126,7 @@ static const char *downl[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "
 static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "3", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
 static const char *float_term[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "4", "st", "-c", "floating", NULL};
 static const char *music[] = {"tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "5", "chromium", "--new-window", "https://music.youtube.com", "--class=music", NULL};
+static const char *wa[] = {"tdrop", "-am", "-w", "70%", "-h", "90%", "-y", "15%", "-x", "15%", "-n", "6", "chromium", "--new-window", "https://web.whatsapp.com", "--class=wa", NULL};
 
 //$ tdrop -am -w 70% -h 70% -y 15% -x 15% -n 10 chromium --new-window https://music.youtube.com --class="test"
 
@@ -143,11 +144,11 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_d,      spawn,          {.v = downl } },
 	{ Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = docs } },
 	{ Mod1Mask,                     XK_m,      spawn,          {.v = music } },
+	{ Mod1Mask,                     XK_w,      spawn,          {.v = wa } },
   
 	{ ControlMask|Mod1Mask,         XK_Delete, spawn,          {.v = shutdown_menu } },
   
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = naut } },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whatsapp } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = signal_app } },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = notion } },
 	{ Mod1Mask|MODKEY,              XK_a,      spawn,          {.v = auto_launch_script } },
