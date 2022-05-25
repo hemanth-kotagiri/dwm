@@ -57,6 +57,7 @@ static const Rule rules[] = {
 	{ "ranger",  NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "wa",   NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "music",   NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "spot",   NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -126,7 +127,8 @@ static const char *downl[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "
 static const char *docs[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "3", "st", "-c", "floating", "-e", "ranger", "/home/hemanth/Documents/", NULL};
 static const char *float_term[] = { "tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "4", "st", "-c", "floating", NULL};
 static const char *music[] = {"tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "5", "chromium", "--new-window", "--app=https://music.youtube.com", "--class=music", NULL};
-static const char *wa[] = {"tdrop", "-am", "-w", "70%", "-h", "80%", "-y", "10%", "-x", "15%", "-n", "6", "chromium", "--new-window", "--app=https://web.whatsapp.com", "--class=wa", NULL};
+static const char *spotify[] = {"tdrop", "-am", "-w", "70%", "-h", "70%", "-y", "15%", "-x", "15%", "-n", "6", "chromium", "--new-window", "--app=https://open.spotify.com", "--class=spot", NULL};
+static const char *wa[] = {"tdrop", "-am", "-w", "70%", "-h", "80%", "-y", "10%", "-x", "15%", "-n", "7", "chromium", "--new-window", "--app=https://web.whatsapp.com", "--class=wa", NULL};
 
 //$ tdrop -am -w 70% -h 70% -y 15% -x 15% -n 10 chromium --new-window https://music.youtube.com --class="test"
 
@@ -144,6 +146,7 @@ static Key keys[] = {
 	{ Mod1Mask,                     XK_d,      spawn,          {.v = downl } },
 	{ Mod1Mask|ShiftMask,           XK_d,      spawn,          {.v = docs } },
 	{ Mod1Mask,                     XK_m,      spawn,          {.v = music } },
+	{ Mod1Mask|ShiftMask,           XK_m,      spawn,          {.v = spotify } },
 	{ Mod1Mask,                     XK_w,      spawn,          {.v = wa } },
   
 	{ ControlMask|Mod1Mask,         XK_Delete, spawn,          {.v = shutdown_menu } },
