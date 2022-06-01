@@ -31,6 +31,7 @@ head over to [suckless.org](https://suckless.org).
 - [x] [dwmblocks](https://github.com/hemanth-kotagiri/dwmblocks)
 - [x] [swallow](./patches/dwm-swallow-20201211-61bb8b2.diff)
 - [x] [pertag](./patches/dwm-pertag-20200914-61bb8b2.diff)
+- [x] [no-border](./patches/dwm-noborder-6.2.diff)
 
 ### Optional
 
