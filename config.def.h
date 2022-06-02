@@ -158,6 +158,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_w,      spawn,          {.v = rofi_window } },
 	// DEFAULTS
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+  { MODKEY|ControlMask,           XK_space,  focusmaster,    {0} },
 	{ MODKEY,                       XK_n,      shiftview,      {.i = -1 }},
 	{ MODKEY,                       XK_p,      shiftview,      {.i = +1 }},
 	{ MODKEY,                       XK_b,      spawn,          {.v = brave }},
